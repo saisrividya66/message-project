@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE</title>
+</head>
+<body>
+    <h1>Templates as Response</h1>  
+    <h1>VIDYA I BELIEVE YOU</h1>
+    <form method="POST" action="/create">
+        {% csrf_token %}
+        <table>
+            <tr>
+
+            
+            <td>Enter Name</td>
+            <td><input type="text" name="name" placeholder="Sender name">
+            </td>
+        </tr>
+            <tr>
+             <td>Email</td>
+            <td><input type="email" name="email" placeholder="Sender mail"></td>
+                </tr>
+                <tr>
+                           <td>mobile </td>
+            <td><input type="number" name="mobile" placeholder="Sender number"></td>
+</tr>
+               <tr>
+                           <td>Message</td>
+            <td><textarea name="msg" rows="5" cols="'30"></textarea>
+            </td>
+            <tr>
+                <td><input type="submit" value="send"></td>
+            </tr>
+</tr>
+        </table>
+    </form>
