@@ -30,9 +30,9 @@ def dashboard(request):
 
 def delete(request,rid):
     #print("id to be deleted:",rid)
-    m=Msg.object.filter(id=rid)
+    m=Msg.objects.filter(id=rid)
     m.delete()
-    return redirect('\dashboard')
+    return redirect('/dashboard')
     #return HttpResponse("id to be deleted"+rid)
 
 def edit(request,rid):
